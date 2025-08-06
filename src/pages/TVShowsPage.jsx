@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import { TVShowsContext } from "../context/TVShowContext";
 import TVShowSearchBar from "../components/tvshows/TVShowSearchBar";
 import Pagination from "../components/Pagination/Pagination";
-import usePagination from "../hooks/UsePagination";
+import usePagination from "../hooks/usePagination";
 import ListGrid from "../components/lists/ListGrid";
 import ListSkeleton from "../components/lists/ListSkeleton";
 import ListEmptyState from "../components/lists/ListEmptyState";

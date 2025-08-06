@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { MoviesContext } from "../../context/MovieContext";
 import useSearch from "../../hooks/useSearch";
 import { useNavigate } from "react-router-dom";
-import usePagination from "../../hooks/UsePagination";
+import usePagination from "../../hooks//usePagination";
 
 function SearchBar() {
   const { query, setQuery } = useContext(MoviesContext);

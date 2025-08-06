@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { MoviesContext } from "../context/MovieContext";
-import usePagination from "../hooks/UsePagination";
+import usePagination from "../hooks/usePagination";
 import Pagination from "../components/Pagination/Pagination";
 import SearchContainer from "../components/search/SearchContainer";
 import ListGrid from "../components/lists/ListGrid";

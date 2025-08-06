@@ -3,7 +3,7 @@ import { MoviesContext } from "../context/MovieContext";
 import SearchBar from "../components/search/SearchBar";
 import SearchInfo from "../components/search/SearchInfo";
 import Pagination from "../components/Pagination/Pagination";
-import usePagination from "../hooks/UsePagination";
+import usePagination from "../hooks/usePagination";
 import useSearch from "../hooks/useSearch";
 import ListGrid from "../components/lists/ListGrid";
 import ListSkeleton from "../components/lists/ListSkeleton";

@@ -3,7 +3,7 @@ import { MoviesContext } from "../../context/MovieContext";
 import MovieCard from "./MovieCard/MovieCard";
 import SkeletonCard from "../common/Loading/SkeletonCard";
 import MovieNotFound from "./MovieNotFound";
-import UsePagination from "../../hooks/UsePagination";
+import usePagination from "../../hooks/usePagination";
 
 function MovieList({ movies }) {
   const { loading } = useContext(MoviesContext);
