@@ -38,7 +38,7 @@ const Pagination = ({ prev, next, currentPage, totalPages, goToPage }) => {
   const pages = getPageNumbers(currentPage, totalPages);
 
   return (
-    <div className="flex justify-center items-center gap-2 my-8 select-none">
+    <div className="flex justify-center items-center flex-wrap gap-2 my-8 select-none">
       <button
         onClick={prev}
         disabled={currentPage === 1}

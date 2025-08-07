@@ -1,6 +1,5 @@
 import { FiX } from "react-icons/fi";
 import WatchListBtn from "../../../common/Header/WatchListBtn";
-import ToggleModeBtn from "../ToggleModeBtn";
 import ToggleMenuLink from "./ToggleMenuLink";
 
 function ToggleMenuLinks({ setOpen }) {
@@ -20,10 +19,9 @@ function ToggleMenuLinks({ setOpen }) {
         <ToggleMenuLink to="/tv" setOpen={setOpen}>
           TV Shows
         </ToggleMenuLink>
-        <div className="mt-4 flex flex-col gap-4">
+        <ToggleMenuLink to="/wishlist" setOpen={setOpen}>
           <WatchListBtn />
-          <ToggleModeBtn />
-        </div>
+        </ToggleMenuLink>
       </nav>
     </div>
   );

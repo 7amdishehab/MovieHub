@@ -2,15 +2,12 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/common/Header/Header";
 import Footer from "./components/common/Footer/Footer";
 import HomePage from "./pages/HomePage";
-import MovieProvider from "./context/MovieProvider";
-import TVShowProvider from "./context/TVShowProvider";
 import Spinner from "./components/common/Loading/Spinner";
 import { useContext } from "react";
 import MovieDetailsPage from "./pages/MovieDetailsPage";
 import SearchResultsPage from "./pages/SearchResultsPage";
 import WishlistPage from "./pages/WishlistPage";
 import NotFoundPage from "./pages/NotFoundPage";
-import ErrorBoundary from "./components/common/ErrorBoundary/ErrorBoundary";
 import TVShowsPage from "./pages/TVShowsPage";
 import TVShowDetailsPage from "./pages/TVShowDetailsPage";
 import { MoviesContext } from "./context/MovieContext";
@@ -27,27 +24,21 @@ function App() {
   }
 
   return (
-    <ErrorBoundary>
-      <MovieProvider>
-        <TVShowProvider>
-          <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-black dark:text-white transition-colors flex flex-col">
-            <Header />
-            <main className="flex-1">
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/tv" element={<TVShowsPage />} />
-                <Route path="/search" element={<SearchResultsPage />} />
-                <Route path="/movie/:id" element={<MovieDetailsPage />} />
-                <Route path="/tv/:id" element={<TVShowDetailsPage />} />
-                <Route path="/wishlist" element={<WishlistPage />} />
-                <Route path="*" element={<NotFoundPage />} />
-              </Routes>
-            </main>
-            <Footer />
-          </div>
-        </TVShowProvider>
-      </MovieProvider>
-    </ErrorBoundary>
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-black dark:text-white transition-colors flex flex-col">
+      <Header />
+      <main className="flex-1">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/tv" element={<TVShowsPage />} />
+          <Route path="/search" element={<SearchResultsPage />} />
+          <Route path="/movie/:id" element={<MovieDetailsPage />} />
+          <Route path="/tv/:id" element={<TVShowDetailsPage />} />
+          <Route path="/wishlist" element={<WishlistPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
